@@ -6,12 +6,12 @@ function tipCalculator(){
 
   // Declare Variables for our math logic //
     var tipTotal = billAmount * serviceQuality
-    var billTotal = billAmount + tipTotal
+    var billTotal = Number(billAmount) + Number(tipTotal)
 
   // More than one guest logic //
     var tipEach = tipTotal / guests
     var billEach = billAmount / guests
-    var billPerPerson = tipEach + billEach;
+    var billPerPerson = Number(tipEach) + Number(billEach);
    
   //  This is where we will display our values //
     $('#tip').html(`$${tipTotal.toFixed(2)}`)
