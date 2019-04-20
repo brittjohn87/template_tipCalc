@@ -1,17 +1,17 @@
 function tipCalculator(){
-  // Declare Variables using the id attribute tied to the htmnl //
+  // Declare Variables using the id attribute tied to the html //
     var billAmount = document.getElementById('billAmount').value;
     var serviceQuality = document.getElementById('serviceQuality').value;
     var guests = document.getElementById('guests').value;
 
   // Declare Variables for our math logic //
     var tipTotal = billAmount * serviceQuality
-    var billTotal = Number(billAmount) + Number(tipTotal)
+    var billTotal = billAmount + tipTotal
 
   // More than one guest logic //
     var tipEach = tipTotal / guests
     var billEach = billAmount / guests
-    var billPerPerson = Number(tipEach) + Number(billEach);
+    var billPerPerson = tipEach + billEach;
    
   //  This is where we will display our values //
     $('#tip').html(`$${tipTotal.toFixed(2)}`)
